@@ -5,7 +5,7 @@
 int mystrlen(char zeile[])
 {
 	int i = 0;
-	for (i = 0; i < 80 && zeile[i] != '\0';i++) {};
+	for (i = 0; i < 80 && zeile[i] != '\0'; i++) { }
 	return i;
 
 }
@@ -21,7 +21,5 @@ int main(void) {
 	printf("Der myString \"%s\" hat %d Zeichen\n", string, laenge);
 
 	return 0;
-
-
 
 }
