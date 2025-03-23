@@ -1,20 +1,32 @@
-// 25.Fakultaet.cpp : This file contains the 'main' function. Program execution begins and ends there.
-//
+#include <stdio.h>
 
-#include <iostream>
+// Funktion zur Berechnung der Fakultät
+void fakultaet(int x, int* ergebnis) {
+    if (x < 0) {
+        printf("Fehler: Fakultät ist nur für x >= 0 definiert!\n");
+        *ergebnis = -1; // Fehlerwert setzen
+        return;
+    }
 
-int main()
-{
-    std::cout << "Hello World!\n";
+    *ergebnis = 1;
+    for (int i = 1; i <= x; i++) {
+        *ergebnis *= i;
+    }
 }
 
-// Run program: Ctrl + F5 or Debug > Start Without Debugging menu
-// Debug program: F5 or Debug > Start Debugging menu
+int main() {
+    int x, ergebnis;
 
-// Tips for Getting Started: 
-//   1. Use the Solution Explorer window to add/manage files
-//   2. Use the Team Explorer window to connect to source control
-//   3. Use the Output window to see build output and other messages
-//   4. Use the Error List window to view errors
-//   5. Go to Project > Add New Item to create new code files, or Project > Add Existing Item to add existing code files to the project
-//   6. In the future, to open this project again, go to File > Open > Project and select the .sln file
+    printf("Fakultät\n");
+    printf("Bitte geben Sie den X-Wert ein: ");
+    scanf("%d", &x);
+
+    fakultaet(x, &ergebnis);
+
+    if (ergebnis != -1) { // Fakultät nur ausgeben, wenn kein Fehler aufgetreten ist
+        printf("Die Fakultät von %d lautet %d.\n", x, ergebnis);
+    }
+
+    return 0;
+}
+
