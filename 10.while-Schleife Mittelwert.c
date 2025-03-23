@@ -1,4 +1,3 @@
-BSP06.c Montag, 3. November 2014 13:12
 /* TINF 2 - Programmieren C
 BSP06: while-Schleife: Mittelwert
 Aufgabenstellung: Mittelwert:
