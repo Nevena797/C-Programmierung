@@ -1,7 +1,7 @@
 /*************************************************************
    BSP5b: MWST-Rechner:
 
-   Eingabe: Betrag und ('n' oder 'b' für Netto oder Brutto)
+   Eingabe: Betrag und ('n' oder 'b' fÃ¼r Netto oder Brutto)
 
    Ausgabe: Nettobetrag, UST, Bruttobetrag
 
@@ -23,10 +23,10 @@ int main()
 
     // Eingabe ob Brutto oder Netto
     printf("Handelt es sich bei diesem Betrag um Brutto- oder Netto-Wert (b/n)? ");
-    scanf(" %c", &b_n_typ); // Leerzeichen vor %c für saubere Eingabe
+    scanf(" %c", &b_n_typ); // Leerzeichen vor %c fÃ¼r saubere Eingabe
 
     // Berechnung je nach Eingabe
-    if (b_n_typ == 'b' || b_n_typ == 'B') // Groß- und Kleinschreibung berücksichtigen
+    if (b_n_typ == 'b' || b_n_typ == 'B') // GroÃŸ- und Kleinschreibung berÃ¼cksichtigen
     {
         brutto = betrag;
         netto = brutto / 1.2;  // Netto-Betrag aus Brutto berechnen
@@ -38,8 +38,8 @@ int main()
     }
     else
     {
-        printf("Ungültige Eingabe! Bitte 'b' für Brutto oder 'n' für Netto eingeben.\n");
-        return 1; // Fehlercode, um zu signalisieren, dass die Eingabe ungültig war
+        printf("UngÃ¼ltige Eingabe! Bitte 'b' fÃ¼r Brutto oder 'n' fÃ¼r Netto eingeben.\n");
+        return 1; // Fehlercode, um zu signalisieren, dass die Eingabe ungÃ¼ltig war
     }
 
     // Mehrwertsteuer berechnen (20%)
