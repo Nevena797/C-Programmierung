@@ -1,20 +1,23 @@
-// 19.StringfunktionenMystrlen.cpp : This file contains the 'main' function. Program execution begins and ends there.
-//
-
-#include <iostream>
-
-int main()
+/* strlen.c */
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+int mystrlen(char zeile[])
 {
-    std::cout << "Hello World!\n";
+	int i = 0;
+	for (i = 0; i < 80 && zeile[i] != '\0';i++) {};
+	return i;
+
 }
 
-// Run program: Ctrl + F5 or Debug > Start Without Debugging menu
-// Debug program: F5 or Debug > Start Debugging menu
+int main(void) {
+	char string[] = "Das ist ein Teststring";
+	int laenge;
 
-// Tips for Getting Started: 
-//   1. Use the Solution Explorer window to add/manage files
-//   2. Use the Team Explorer window to connect to source control
-//   3. Use the Output window to see build output and other messages
-//   4. Use the Error List window to view errors
-//   5. Go to Project > Add New Item to create new code files, or Project > Add Existing Item to add existing code files to the project
-//   6. In the future, to open this project again, go to File > Open > Project and select the .sln file
+	laenge = strlen(string);
+	printf("Der String \"%s\" hat %d Zeichen\n", string, laenge);
+
+	laenge = mystrlen(string);
+	printf("Der myString \"%s\" hat %d Zeichen\n", string, laenge);
+
+	return 0;
